@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background: url(https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.User{
+    width: 700px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding-bottom: 20px;
+    backdrop-filter: blur(10px);
+    margin: 10px 0;
+
+}
+.userBody{
+    background: orangered;
+    padding-bottom: 50px;
+    border-bottom: 4px solid #fff;
+    border-bottom-left-radius: 100px;
+}
+.userHead{
+    padding: 10px 20px;
+}
+.userHead h1{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.userInputBox{
+    margin-top: 20px;
+    padding: 0 20px;
+}
+.userInputBox h2{
+    font-size: 35px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+}
+.InputBox{
+    margin-top: 20px;
+}
+.singleInput{
+    padding-bottom: 10px;
+}
+.singleInput input{
+    width: 100%;
+    /* height: 40px; */
+    font-size: 22px;
+    padding: 20px;
+    color: #fff;
+    font-weight: 600;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #fff;
+}
+.singleInput input::placeholder{
+    color: #fff;
+    font-weight: 700;
+}
+.inputBtn{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.inputBtn button{
+    width: 400px;
+    padding: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: orangered;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    transition: all .4s linear;
+}
+.inputBtn button i{
+    font-size: 30px;
+}
+
+.inputBtn button::after{
+    content: '';
+    width: 0;;
+    height: 100%;
+    background: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    z-index: -1;
+    transition: all .4s linear;
+}
+.inputBtn button:hover::after{
+    width: 100%;
+}
+.inputBtn button:hover{
+    letter-spacing: 3px;
+}
+.error{
+    margin-top: 20px;
+}
+.error p{
+    font-size: 25px;
+    font-weight: 600;
+    color: yellow;
+    text-align: center;
+}
+
+.allUser{
+    margin-top: 10px;
+    padding: 0 20px;
+}
+.allUser .title{
+    font-size: 30px;
+    font-weight: 900;
+    color: #fff;
+    text-align: center;
+    border-bottom: 3px solid #fff;
+}
+.singleUser{
+    margin-top: 20px;
+    background: #fff;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+.singleUser .studentName{
+    font-size: 30px;
+    color: orangered;
+    text-align: center;
+}
+.singleUser .sudentRoll,.studentId,.studentEmail,.studentPhone,.studentAge{
+    font-size: 25px;
+    margin-top: 10px;
+    color: orangered;
+    font-weight: 600;
+    text-align: center;
+}

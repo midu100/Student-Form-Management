@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User data</title>
+    <!-- css -->
+     <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- User Management System -->
+    <div class="User">
+        <div class="userBody">
+            <div class="userHead">
+                <h1>Student Information</h1>
+            </div>
+        </div>
+
+        <div class="userInputBox">
+            <h2>Add New Student</h2>
+
+            <div class="InputBox">
+                <div class="singleInput">
+                    <input class="InputName" type="text" placeholder="Your Name">
+                </div>
+
+                <div class="singleInput">
+                    <input class="InputId" type="text" placeholder="Your ID">
+                </div>
+
+                <div class="singleInput">
+                    <input class="InputEmail" type="text" placeholder="Your Email">
+                </div>
+
+                <div class="singleInput">
+                    <input class="InputPhone" type="text" placeholder="Your Phone">
+                </div>
+
+                <div class="singleInput">
+                    <input class="InputAge" type="number" placeholder="Your Age">
+                </div>
+
+                <div class="inputBtn">
+                    <button onclick="handleAdd()">Add Student <i class="fa-brands fa-mailchimp"></i></button>
+                </div>
+
+            </div>
+
+            <div class="error">
+                <p class="errorUser"></p>
+            </div>
+        </div>
+
+        <div class="allUser">
+            <h2 class="title">Student List</h2>
+
+            <div class="allBox">
+                <!-- <div class="singleUser">
+                    <h2 class="studentName">Name:</h2>
+                    <p class="sudentRoll">Roll:</p>
+                    <p class="studentId">ID:</p>
+                    <p class="studentEmail">Email:</p>
+                    <p class="studentPhone">Phone:</p>
+                    <p class="studentAge">Age:</p>
+                </div> -->
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- js -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
