@@ -30,34 +30,7 @@ let handleAdd = () => {
         let singUser1 = new user(InputName.value, InputId.value, InputEmail.value, InputPhone.value, InputAge.value)
         totalUser.push(singUser1)
 
-        let singUser2 = new user(InputName.value, InputId.value, InputEmail.value, InputPhone.value, InputAge.value)
-        totalUser.push(singUser2)
-
-        let singUser3 = new user(InputName.value, InputId.value, InputEmail.value, InputPhone.value, InputAge.value)
-        totalUser.push(singUser3)
-
-        let singUser4 = new user(InputName.value, InputId.value, InputEmail.value, InputPhone.value, InputAge.value)
-        totalUser.push(singUser4)
-
-        let singUser5 = new user(InputName.value, InputId.value, InputEmail.value, InputPhone.value, InputAge.value)
-        totalUser.push(singUser5)
-
-        let singUser6 = new user(InputName.value, InputId.value, InputEmail.value, InputPhone.value, InputAge.value)
-        totalUser.push(singUser6)
-
-        let singUser7 = new user(InputName.value, InputId.value, InputEmail.value, InputPhone.value, InputAge.value)
-        totalUser.push(singUser7)
-
-        let singUser8 = new user(InputName.value, InputId.value, InputEmail.value, InputPhone.value, InputAge.value)
-        totalUser.push(singUser8)
-
-        let singUser9 = new user(InputName.value, InputId.value, InputEmail.value, InputPhone.value, InputAge.value)
-        totalUser.push(singUser9)
-
-        let singUser10 = new user(InputName.value, InputId.value, InputEmail.value, InputPhone.value, InputAge.value)
-        totalUser.push(singUser10)
-
-        console.log(totalUser)
+        console.log(totalUser) //checking object
 
 
         // create tags
@@ -67,6 +40,8 @@ let handleAdd = () => {
         let studentEmail= document.createElement('p')
         let studentPhone= document.createElement('p')
         let studentAge= document.createElement('p')
+        let singleBtn = document.createElement('div')
+        let userDelete = document.createElement('button')
 
         // append child
         allBox.appendChild(singleUser)
@@ -75,6 +50,8 @@ let handleAdd = () => {
         singleUser.appendChild(studentEmail)
         singleUser.appendChild(studentPhone)
         singleUser.appendChild(studentAge)
+        singleUser.appendChild(singleBtn)
+        singleBtn.appendChild(userDelete)
 
         // add className
         singleUser.classList.add('singleUser')
@@ -83,15 +60,44 @@ let handleAdd = () => {
         studentEmail.classList.add('studentEmail')
         studentPhone.classList.add('studentPhone')
         studentAge.classList.add('studentAge')
+        singleBtn.classList.add('singleBtn')
+        userDelete.classList.add('userDelete')
 
 
         // add content
-        studentName.innerHTML = InputName.value
+        userDelete.innerHTML = '<i class="fa-solid fa-trash"></i>'
+        totalUser.map((item)=>{
+            studentName.innerHTML  = `Name  : ${item.userName}`
+            studentId.innerHTML    = `Id    : ${item.userId}`
+            studentEmail.innerHTML = `Email : ${item.userEmail}`
+            studentPhone.innerHTML = `Phone : ${item.userPhone}`
+            studentAge.innerHTML   = `Age   : ${item.userAge}`
+        })
+        // remove input value
+        InputName.value=''
+        InputId.value  =''
+        InputEmail.value=''
+        InputPhone.value=''
+        InputAge.value = ''
+
+        // delete button
+        userDelete.addEventListener('click',()=>{
+            singleUser.remove()
+        })
+
+
+    }
+}
+
+
+
+/*
+
+studentName.innerHTML = InputName.value
         studentId.innerHTML = InputId.value
         studentEmail.innerHTML = InputEmail.value
         studentPhone.innerHTML = InputPhone.value
         studentAge.innerHTML = InputAge.value
 
 
-    }
-}
+*/

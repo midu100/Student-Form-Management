@@ -22,6 +22,7 @@ body{
     padding-bottom: 20px;
     backdrop-filter: blur(10px);
     margin: 10px 0;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
 }
 .userBody{
@@ -141,16 +142,59 @@ body{
     background: #fff;
     padding: 10px 10px;
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 5px 5px 15px;
 }
 .singleUser .studentName{
-    font-size: 30px;
+    font-size: 40px;
+    font-weight: 700;
     color: orangered;
-    text-align: center;
+    text-align: start;
 }
 .singleUser .sudentRoll,.studentId,.studentEmail,.studentPhone,.studentAge{
     font-size: 25px;
     margin-top: 10px;
     color: orangered;
     font-weight: 600;
-    text-align: center;
+    text-align: start;
+}
+
+.singleBtn{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.singleBtn .userDelete{
+    width: 300px;
+    padding: 20px 80px;
+    border: none;
+    outline: none;
+    background: orangered;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.singleBtn .userDelete::after{
+    content: '';
+    width: 0;
+    height: 100%;
+    background: red;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: all .4s linear;
+
+}
+.singleBtn .userDelete:hover::after{
+    width: 100%;
+}
+
+.singleBtn .userDelete i{
+    font-size: 30px;
 }
